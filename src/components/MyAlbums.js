@@ -11,6 +11,7 @@ class MyAlbums extends Component {
         .then(response => this.setState({ newapp: response.data }));   
     }
 
+    // testing for the git
     renderNewapp() {
        return this.state.newapp.map(album => <Text>{album.title}</Text>);
     }
