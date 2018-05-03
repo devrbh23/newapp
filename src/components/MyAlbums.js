@@ -6,7 +6,7 @@ import axios from 'axios';
 class MyAlbums extends Component {
     state = { newapp: [] };
 
-    componentWillMount() {
+    componentDidMount() {
         axios.get('https://rallycoding.herokuapp.com/api/music_albums')
         .then(response => this.setState({ newapp: response.data }));   
     }
