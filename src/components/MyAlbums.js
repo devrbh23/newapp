@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native'; 
+import { View, } from 'react-native'; 
 import axios from 'axios';
+import AlbumDetail from './AlbumDetail';
 
 
 class MyAlbums extends Component {
@@ -13,11 +14,12 @@ class MyAlbums extends Component {
 
     // testing for the git
     renderNewapp() {
-       return this.state.newapp.map(album => <Text>{album.title}</Text>);
+       return this.state.newapp.map(album => 
+        <AlbumDetail key={album.title} album={album} />
+    );
     }
 
     render() {
-        console.log(this.state);
         return (
             <View>
                 {this.renderNewapp()}
