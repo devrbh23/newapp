@@ -7,7 +7,7 @@ import MyAlbums from './src/components/MyAlbums';
 // Create a Component
 const App = () => 
     (
-        <View>
+        <View style={{ flex: 1 }}>
         <Header headerText={'Newapp'} />
         <MyAlbums />
         </View>
